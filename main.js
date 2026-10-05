@@ -12,7 +12,7 @@ const btnClear = document.createElement("button");
 textUp.classList = "textUp";
 text.textContent = "Etch a Sketch";
 input.textContent = "Input number";
-text2.textContent = "16 * 16";
+text2.textContent = "Squares 16 * 16";
 
 textUp.appendChild(text);
 textUp.appendChild(text2);
@@ -88,9 +88,9 @@ input.addEventListener("click", () => {
   const value = Number(prompt("Input number of squares from 1 - 100."));
   if (value >= 1 && value <= 100) {
     userInput = value;
-
     input.value = userInput;
     createGrid();
-  }
-  text2.textContent = `${value} * ${value}`;
+    text2.textContent = `Squares ${value} * ${value}`;
+  } else (text2.textContent = "Wrong Input!" )
+  
 });
