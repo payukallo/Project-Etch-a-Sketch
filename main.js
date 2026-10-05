@@ -1,6 +1,7 @@
 const content = document.querySelector(".content");
 const textUp = document.createElement("div");
 const text = document.createElement("p");
+const text2 = document.createElement("p");
 const input = document.createElement("button");
 const container = document.createElement("div");
 const downBtn = document.createElement("div");
@@ -9,10 +10,12 @@ const btnDefaultColor = document.createElement("button");
 const btnReload = document.createElement("button");
 
 textUp.classList = "textUp";
-text.textContent = "Project Etch a Sketch";
+text.textContent = "Etch a Sketch";
 input.textContent = "Input number";
+text2.textContent = "16 * 16";
 
 textUp.appendChild(text);
+textUp.appendChild(text2);
 textUp.appendChild(input);
 content.appendChild(textUp);
 
@@ -80,6 +83,8 @@ function createGrid() {
   }
 }
 
+
+
 createGrid();
 
 input.addEventListener("click", () => {
@@ -90,4 +95,8 @@ input.addEventListener("click", () => {
     input.value = userInput;
     createGrid();
   }
+  text2.textContent = `${value} * ${value}`;
 });
+
+
+
