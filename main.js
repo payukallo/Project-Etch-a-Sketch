@@ -5,8 +5,8 @@ const input = document.createElement("button");
 const container = document.createElement("div");
 const downBtn = document.createElement("div");
 const btnRainbowColor = document.createElement("button");
+const btnDefaultColor = document.createElement("button");
 const btnReload = document.createElement("button");
-const btnNormalColor = document.createElement("button");
 
 textUp.classList = "textUp";
 text.textContent = "Project Etch a Sketch";
@@ -19,25 +19,24 @@ content.appendChild(textUp);
 container.classList = "container";
 content.appendChild(container);
 
-btnReload.textContent = "Reload";
-btnNormalColor.textContent = "Normal";
 btnRainbowColor.textContent = "Rainbow";
+btnDefaultColor.textContent = "Default";
+btnReload.textContent = "Reload";
 
-let normal = false;
 let rainbow = false;
+let normal = false;
 
-btnNormalColor.addEventListener("click", () => {
+btnRainbowColor.addEventListener("click", () => {
+  rainbow = true;
+});
+
+btnDefaultColor.addEventListener("click", () => {
   normal = true;
   rainbow = false;
 });
 
 btnReload.addEventListener("click", () => {
   location.reload();
-});
-
-
-btnRainbowColor.addEventListener("click", () => {
-  rainbow = true;
 });
 
 function randomColor() {
@@ -50,9 +49,9 @@ function randomColor() {
 
 downBtn.classList = "downBtn";
 content.appendChild(downBtn);
-downBtn.appendChild(btnNormalColor);
-downBtn.appendChild(btnReload);
 downBtn.appendChild(btnRainbowColor);
+downBtn.appendChild(btnDefaultColor);
+downBtn.appendChild(btnReload);
 
 let userInput = 16;
 
@@ -92,4 +91,3 @@ input.addEventListener("click", () => {
     createGrid();
   }
 });
-
