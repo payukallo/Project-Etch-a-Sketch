@@ -1,0 +1,57 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightslategray;
+}
+
+.content {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(222, 204, 187);
+}
+
+.textUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 800px;
+  margin: 20px;
+}
+
+.downBtn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.divs {
+  display: flex;
+}
+
+.divs2 {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 50px;
+  border: 0.5px solid black;
+}
