@@ -7,7 +7,7 @@ const container = document.createElement("div");
 const downBtn = document.createElement("div");
 const btnRainbowColor = document.createElement("button");
 const btnDefaultColor = document.createElement("button");
-const btnReload = document.createElement("button");
+const btnClear = document.createElement("button");
 
 textUp.classList = "textUp";
 text.textContent = "Etch a Sketch";
@@ -24,7 +24,7 @@ content.appendChild(container);
 
 btnRainbowColor.textContent = "Rainbow";
 btnDefaultColor.textContent = "Default";
-btnReload.textContent = "Reload";
+btnClear.textContent = "Clear";
 
 let rainbow = false;
 let normal = false;
@@ -50,7 +50,7 @@ downBtn.classList = "downBtn";
 content.appendChild(downBtn);
 downBtn.appendChild(btnRainbowColor);
 downBtn.appendChild(btnDefaultColor);
-downBtn.appendChild(btnReload);
+downBtn.appendChild(btnClear);
 
 let userInput = 16;
 
@@ -72,7 +72,7 @@ function createGrid() {
         } else {
           divs2.style.backgroundColor = "black";
         }
-        btnReload.addEventListener("click", () => {
+        btnClear.addEventListener("click", () => {
           divs2.style.backgroundColor = "bisque";
         });
       });
