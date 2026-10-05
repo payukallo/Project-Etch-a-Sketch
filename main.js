@@ -38,10 +38,6 @@ btnDefaultColor.addEventListener("click", () => {
   rainbow = false;
 });
 
-btnReload.addEventListener("click", () => {
-  location.reload();
-});
-
 function randomColor() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -76,14 +72,15 @@ function createGrid() {
         } else {
           divs2.style.backgroundColor = "black";
         }
+        btnReload.addEventListener("click", () => {
+          divs2.style.backgroundColor = "bisque";
+        });
       });
     }
     divs.classList = "divs";
     container.appendChild(divs);
   }
 }
-
-
 
 createGrid();
 
@@ -97,6 +94,3 @@ input.addEventListener("click", () => {
   }
   text2.textContent = `${value} * ${value}`;
 });
-
-
-
